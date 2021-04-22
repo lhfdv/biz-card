@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iron Cards</title>
+  <title>biz-card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
@@ -13,18 +16,47 @@
 
   {{#if currentUser}}
 
-  <nav>
-    <a href="/cards">Meus Cards</a>
-    <a href="/cards/new">Cadastrar Novo Card</a>
-    <a href="/logout">Logout</a>
-  </nav>
+  <header>
+    <a class="logo" href="/"><img src="img/logo.svg" alt="logo"></a>
+    <nav>
+      <ul class="nav__links">
+        <li><a class="cta" href="/cards">Meus Cards</a></li>
+        <li><a class="cta"href="/cards/new">Novo Card</a></li>
+        <li><a class="logout" href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+    <p class="menu cta">Menu</p>
+  </header>
+
+  <div class="overlay">
+    <a class="close">&times;</a>
+    <div class="overlay__content">
+      <a class="cta" href="/cards">Meus Cards</a>
+      <a class="cta" href="/cards/new">Novo Card</a>
+      <a class="logout" href="/logout">Logout</a>
+    </div>
+  </div>
 
   {{else}}
 
-  <nav>
-    <a href="/login">Login</a>
-    <a href="/signup">Signup</a>
-  </nav>
+  <header>
+    <a class="logo" href="/"><img src="/img/logo.svg" alt="logo"></a>
+    <nav>
+      <ul class="nav__links">
+        <li><a class="cta"href="/login">Login</a></li>
+        <li><a class="cta" href="/signup">Cadastrar</a></li>
+      </ul>
+    </nav>
+    <p class="menu cta">Menu</p>
+  </header>
+
+  <div class="overlay">
+    <a class="close">&times;</a>
+    <div class="overlay__content">
+      <a class="cta" href="/login">Login</a>
+      <a class="cta" href="/signup">Cadastrar</a>
+    </div>
+  </div>
 
   {{/if}}
 
@@ -33,6 +65,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/js/mobile.js"></script>
 
 </body>
 </html>

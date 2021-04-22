@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 
 // Entregar o HTML com o formulario de cadastro do novo card
 router.get('/new', (req, res) => {
-  res.render('newCard');
+  res.render('newCard', { currentUser: req.session.currentUser } );
 });
 
 // /:cardId ---> isso significa que pode vir escrito QUALQUER COISA na URL

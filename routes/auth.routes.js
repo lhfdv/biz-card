@@ -57,7 +57,7 @@ router.get('/login', (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const { userEmail, userPassword } = req.body;
+    const { userEmail, userPassword, userNickname } = req.body;
 
     // verificação dos campos --- Implementar com base na rota de signup ;-)
 
