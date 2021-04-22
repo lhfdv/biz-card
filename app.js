@@ -34,6 +34,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 // HomeRoutes e AuthRoutes são rotas PUBLICAS
 app.use('/', homeRoutes);
 app.use('/', authRoutes);
+app.use('/', showcaseRoutes);
 
 // Essa callback dentro do app.use vai ser chamada em TODOS os requests que chegarem aqui.
 // BLOQUEADOR DE REQUESTS (FILTRO)
@@ -46,7 +47,6 @@ app.use((req, res, next) => {
 });
 
 app.use('/cards', cardsRoutes);
-app.use('/showcase', showcaseRoutes);
 
 // catch 404 and render a not-found.hbs template
 app.use((req, res, next) => {
