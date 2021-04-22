@@ -4,8 +4,9 @@ const express = require('express');
 const hbs = require('hbs');
 
 const homeRoutes = require('./routes/home.routes');
-const authRoutes = require('./routes/auth.routes')
+const authRoutes = require('./routes/auth.routes');
 const cardsRoutes = require('./routes/cards.routes');
+const showcaseRoutes = require('./routes/showcase.routes');
 
 const sessionConfig = require('./config/session.config');
 
@@ -44,8 +45,8 @@ app.use((req, res, next) => {
   res.redirect('/login');
 });
 
-// CardsRoutes são rotas PROTEGIDAS
 app.use('/cards', cardsRoutes);
+app.use('/showcase', showcaseRoutes);
 
 // catch 404 and render a not-found.hbs template
 app.use((req, res, next) => {
