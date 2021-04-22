@@ -18,6 +18,9 @@ html, body{
   border-radius: 5px;
   box-shadow: 0 30px 50px;
 }
+.warning{
+  color: white;
+}
 .container h1{
   color: white;
   font-weight: 500;
@@ -40,6 +43,7 @@ html, body{
 .container input[type="text"]:focus,.container input[type="password"]:focus{
   width: 380px;
   border-color: #2ecc71;
+  color: white;
 }
 .container input[type="submit"]{
   border: 0;
@@ -48,6 +52,7 @@ html, body{
   margin: 20px auto;
   text-align: center;
   border: 2px solid #2ecc71;
+  color: white;
   padding: 14px 25px;
   outline: none;
   color: white;
@@ -58,6 +63,7 @@ html, body{
 }
 .container input[type="submit"]:hover{
   background: #2ecc71;
+  color: white;
 }
 
 * {
