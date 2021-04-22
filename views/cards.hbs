@@ -1,0 +1,19 @@
+{{!-- Form que faz GET, inclui as infos do formulário na query string da URL --}}
+<form action="/cards" method="get">
+  {{!-- Criar um campo para filtar os cards pelo nome!!! --}}
+  <input type="text" name="cardTitle" placeholder="Busque seu card pelo nome">
+  <button type="submit">Buscar Cards</button>
+</form>
+
+{{#if cards}}
+  {{#each cards}}
+    <div>
+      <a href="/cards/{{this._id}}">
+        <h3>{{this.title}}</h3>
+        <img src="{{this.image}}" alt="{{this.title}} photo">
+      </a>
+    </div>
+  {{/each}}
+{{else}}
+  <h1>Nenhum card encontrado. Favor refaze a busca ou cadastrar um novo card.</h1>
+{{/if}}

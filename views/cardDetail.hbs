@@ -1,0 +1,53 @@
+<h4>Nome: {{card.title}}</h4>
+<img src="{{card.image}}" alt="{{card.title}} photo">
+<p>Dono: {{card.owner.name}}</p>
+<p>Mensagem: {{card.message}}</p>
+<p>Título: {{card.title}}</p>
+<p>Email: {{card.email}}</p>
+<p>Twitter: {{card.twitter}}</p>
+<p>Mobile: {{card.mobile}}</p>
+<p>Website: {{card.website}}</p>
+<p>Facebook: {{card.facebook}}</p>
+<p>Instagram: {{card.instagram}}</p>
+<p>Outros: {{card.other}}</p>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editCard">
+  Editar dados do meu card
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="editCard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar meu card</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form action="/cards/edit?pedId={{card._id}}" method="post">
+      {{!-- <form action="/cards/edit/{{card._id}}" method="post"> PASSANDO O ID VIA REQ.PARAMS (ROTA) --}}
+        <div class="modal-body">
+          <input type="text" title="cardTitle" placeholder="Nome do card" value="{{card.title}}">
+          <input type="text" title="cardImage" placeholder="Link da foto do card" value="{{card.image}}">
+          <input type="text" title="cardMessage" placeholder="Link da foto do card" value="{{card.message}}">
+          <input type="text" title="cardEmail" placeholder="Link da foto do card" value="{{card.email}}">
+          <input type="text" title="cardMobile" placeholder="Link da foto do card" value="{{card.mobile}}">
+          <input type="text" title="cardWebsite" placeholder="Link da foto do card" value="{{card.website}}">
+          <input type="text" title="cardFacebook" placeholder="Link da foto do card" value="{{card.facebook}}">
+          <input type="text" title="cardInstagram" placeholder="Link da foto do card" value="{{card.instagram}}">
+          <input type="text" title="cardOther" placeholder="Link da foto do card" value="{{card.other}}">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</div>

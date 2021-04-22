@@ -1,0 +1,20 @@
+<h1>BIZ-CARD</h1>
+
+<form class="container" action="/login" method="post">
+
+  <div>
+    <input type="text" name="userEmail" placeholder="Digite seu email">
+    {{#if userEmailErrors}}
+      <span class="warning">{{userEmailErrors.[0]}}</span>
+    {{/if}}
+  </div>
+
+  <div>
+    <input type="password" name="userPassword" placeholder="Digite sua senha">
+    {{#if userPasswordErrors}}
+      <span class="warning">{{userPasswordErrors.[0]}}</span>
+    {{/if}}
+  </div>
+
+  <button type="submit">Efetuar login</button>
+</form>

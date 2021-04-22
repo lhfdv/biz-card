@@ -1,0 +1,36 @@
+<h1>Bem vindo ao BIZ-CARD! Faça seu cadastro e aproveite nossos incríveis serviços</h1>
+
+<form action="/signup" method="post">
+  <div>
+    <input type="text" name="userName" placeholder="Digite seu nome completo">
+    {{#if userNameErrors}}
+      {{#each userNameErrors}}
+        <span class="warning">{{this}}</span>
+      {{/each}}
+    {{/if}}
+  </div>
+
+  <div>
+    <input type="text" name="userNickname" placeholder="Digite seu nick">
+    {{#if userNicknameErrors}}
+      <span class="warning">{{userNicknameErrors.[0]}}</span>
+    {{/if}}
+  </div>
+
+  <div>
+    <input type="text" name="userEmail" placeholder="Digite seu email">
+    {{#if userEmailErrors}}
+      <span class="warning">{{userEmailErrors.[0]}}</span>
+    {{/if}}
+  </div>
+
+  <div>
+    <input type="password" name="userPassword" placeholder="Crie a sua senha de acesso">
+    {{#if userPasswordErrors}}
+      <span class="warning">{{userPasswordErrors.[0]}}</span>
+    {{/if}}
+  </div>
+
+
+  <button type="submit">Efetuar cadastro</button>
+</form>
