@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,10 @@
   <link rel="stylesheet" href="/styles/main.css">
   <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/superslides.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap-block-grid/dist/bootstrap4-block-grid.min.css">
 
 </head>
 <body>
@@ -20,9 +23,11 @@
   <header>
     <nav>
       <ul class="nav__links">
+        <li><a href="/"><img src="/img/home.svg" width="50" height="30" class="white-svg"></a></li>
         <li><a class="cta" href="/cards">Meus Cards</a></li>
         <li><a class="cta"href="/cards/new">Novo Card</a></li>
-        <li><a class="logout" href="/logout">Logout</a></li>
+        <li><a href="/logout"><img src="/img/logout.svg" width="50" height="30" class="white-svg"></a></li>
+        <li><p class="logo">bizCard</p><p class="dot">.</p></li>
       </ul>
     </nav>
     <p class="menu cta">Menu</p>
@@ -31,9 +36,11 @@
   <div class="overlay">
     <a class="close">&times;</a>
     <div class="overlay__content">
+      <a href="/"><img src="/img/home.svg" width="50" height="30" class="white-svg"></a>
       <a class="cta" href="/cards">Meus Cards</a>
       <a class="cta" href="/cards/new">Novo Card</a>
-      <a class="logout" href="/logout">Logout</a>
+      <p class="logo">bizCard</p><p class="dot">.</p>
+      <a href="/logout"><img src="/img/logout.svg" width="50" height="30" class="white-svg">
     </div>
   </div>
 
@@ -42,8 +49,10 @@
   <header>
     <nav>
       <ul class="nav__links">
-        <li><a class="cta"href="/login">Login</a></li>
+        <li><a href="/"><img src="/img/home.svg" width="50" height="30" class="white-svg"></a></li>
+        <li><a class="cta" href="/login">Login</a></li>
         <li><a class="cta" href="/signup">Cadastrar</a></li>
+        <li><p class="logo">bizCard</p><p class="dot">.</p></li>
       </ul>
     </nav>
     <p class="menu cta">Menu</p>
@@ -52,8 +61,10 @@
   <div class="overlay">
     <a class="close">&times;</a>
     <div class="overlay__content">
+      <a href="/home"><img src="/img/home.svg" width="50" height="30" class="white-svg"></a>
       <a class="cta" href="/login">Login</a>
       <a class="cta" href="/signup">Cadastrar</a>
+      <p class="logo">bizCard</p><p class="dot">.</p>
     </div>
   </div>
 
@@ -61,10 +72,21 @@
 
   {{{body}}}
 
+  <video autoplay muted loop id="myVideo">
+    <source src="/video/forest.mp4" type="video/mp4">
+  </video>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/js/boostrap.min.js"></script>
   <script type="text/javascript" src="/js/mobile.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/efa251f87e.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://unpkg.com/isotope-layout@3.0.5/dist/isotope.pkgd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+  <script src="js/jquery.superslides.min.js"></script>
+  <script src="js/style.js"></script>
 
 </body>
 </html>

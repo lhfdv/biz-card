@@ -74,7 +74,7 @@ router.post('/login', async (req, res) => {
     }
 
     // Iniciar uma sessão para este usuário (após o almoço)
-    req.session.currentUser = userFromDb;
+    req.session.currentUser = userFromDb; 
 
     // Encaminha o usuário para a sua área logada
     res.redirect('/cards');

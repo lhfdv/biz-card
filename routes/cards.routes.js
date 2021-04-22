@@ -8,8 +8,11 @@ const router = express();
 router.get('/', (req, res) => {
   const { cardTitle } = req.query;
 
+  console.log(cardTitle);
+
   Card.find({ owner: req.session.currentUser._id, title: { $regex: new RegExp(cardTitle, 'i') } })
     .then(cardsFromDatabase => {
+
       res.render('cards', { cards: cardsFromDatabase, currentUser: req.session.currentUser });
     });
 });
@@ -25,7 +28,7 @@ router.get('/:cardId', (req, res) => {
   Card.findById(cardId).populate('owner')
     .then(cardFromDatabase => {
 
-      const mongoDbObject = cardFromDatabase.toJSON();
+      const mongoDbObject = cardFromDatabase ? cardFromDatabase.toJSON() : {} ;
 
       const newObject = { ...mongoDbObject };
 

@@ -4,7 +4,7 @@ const cardSchema = new Schema({
   owner: { type: Types.ObjectId, ref: 'User' },
   title: { type: String, required: true, minlength: 1 },
   message: { type: String, required: false },
-  image: { type: String, required: true },
+  image: { type: String, required: true, default: "/img/default.png" },
   email: { type: String, required: false },
   twitter: { type: String, required: false },
   mobile: { type: String, required: false },
@@ -12,7 +12,6 @@ const cardSchema = new Schema({
   facebook: { type: String, required: false },
   instagram: { type: String, required: false },
   other : { type: String, required: false },
-  link: { type: String, required: true, unique: true }
 },
 {
   timestamps: true,
