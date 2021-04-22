@@ -4,6 +4,7 @@
   "description": "Bussiness Card application",
   "main": "app.js",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cloudinary": "^1.25.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
