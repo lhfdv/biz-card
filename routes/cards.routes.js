@@ -28,7 +28,7 @@ router.get('/:cardId', (req, res) => {
       const mongoDbObject = cardFromDatabase.toJSON();
 
       const newObject = { ...mongoDbObject };
-      
+
       res.render('cardDetail', { card: newObject, currentUser: req.session.currentUser });
     });
 });
