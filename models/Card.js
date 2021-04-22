@@ -4,7 +4,7 @@ const cardSchema = new Schema({
   owner: { type: Types.ObjectId, ref: 'User' },
   title: { type: String, required: true, minlength: 1 },
   message: { type: String, required: false },
-  image: { type: String, required: true, default: '' },
+  image: { type: String, required: true },
   email: {type: String, required: false },
   twitter: {type: String, required: false },
   mobile: {type: String, required: false },
