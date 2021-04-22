@@ -2,7 +2,7 @@
   "name": "biz-card",
   "version": "1.0.0",
   "description": "Bussiness Card application",
-  "main": "app.js"
+  "main": "app.js",
   "dependencies": {
     "cloudinary": "^1.25.1",
     "dotenv": "^8.2.0",
