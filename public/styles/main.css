@@ -5,13 +5,13 @@ body{
   background: #34495e;
 }
 .container{
-  width:300px;
-  padding: 40px;
+  padding: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   background: #191919;
+  color: white;
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 50px 50px;
@@ -19,7 +19,6 @@ body{
 .container h1{
   color: white;
   font-weight: 500;
-
 }
 .container input[type="text"],.container input[type="password"]{
   border: 0;
@@ -37,7 +36,7 @@ body{
   transition: 0.25s;
 }
 .container input[type="text"]:focus,.container input[type="password"]:focus{
-  width: 280px;
+  width: 380px;
   border-color: #2ecc71;
 }
 .container input[type="submit"]{

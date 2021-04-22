@@ -1,4 +1,4 @@
-const { nameValidation, nicknameValidation, passwordValidation, emailValidation, imageValidation } = require('./fields.validation');
+const { nameValidation, nicknameValidation, passwordValidation, emailValidation } = require('./fields.validation');
 
 const validateSignup = (name, nickname, email, password, image) => {
   const errorsObj = {};
@@ -21,11 +21,6 @@ const validateSignup = (name, nickname, email, password, image) => {
   const userPasswordErrors = passwordValidation(password);
   if (userPasswordErrors.length > 0) {
     errorsObj.userPasswordErrors = userPasswordErrors;
-  }
-
-  const userImageErrors = imageValidation(image);
-  if (userImageErrors.length > 0) {
-    errorsObj.userImageErrors = userImageErrors;
   }
 
   return errorsObj;
