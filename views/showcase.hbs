@@ -1,19 +1,47 @@
-<div class="container-div">
+<div class="container-div-showcase">
   <h4>{{card.title}}</h4>
+
   <br>
-  {{#if this.image}}
-    <img class="avatar" src="{{this.image}}" alt="avatar">
+  
+  {{#if card.image}}
+    <img class="avatar" src="{{card.image}}" alt="avatar">
   {{else}}
     <img class="avatar" src="/img/default.png" alt="avatar">
   {{/if}}
-  <p>{{card.owner.name}}</p>
-  <p>Mensagem: {{card.message}}</p>
-  <p>Título: {{card.title}}</p>
-  <p>Email: {{card.email}}</p>
-  <p>Twitter: {{card.twitter}}</p>
-  <p>Mobile: {{card.mobile}}</p>
-  <p>Website: {{card.website}}</p>
-  <p>Facebook: {{card.facebook}}</p>
-  <p>Instagram: {{card.instagram}}</p>
-  <p>Outros: {{card.other}}</p>
+
+  {{#if card.owner.name}}
+    <p>{{card.owner.name}}</p>
+  {{/if}}
+
+  {{#if card.message}}
+    <p>{{card.message}}</p>
+  {{/if}}
+
+  {{#if card.email}}
+    <p>{{card.email}}</p>
+  {{/if}}
+
+  {{#if card.mobile}}
+    <p>{{card.mobile}}</p>
+  {{/if}}
+
+  {{#if card.website}}
+    <p>{{card.website}}</p>
+  {{/if}}
+
+  {{#if card.twitter}}
+    <p>{{card.twitter}}</p>
+  {{/if}}
+
+  {{#if card.facebook}}
+    <p>{{card.facebook}}</p>
+  {{/if}}
+
+  {{#if card.instagram}}
+    <p>{{card.instagram}}</p>
+  {{/if}}
+
+  {{#if card.other}}
+    <p>{{card.other}}</p>
+  {{/if}}
 </div>

@@ -1,20 +1,74 @@
 <div class="container-div">
   <h4>{{card.title}}</h4>
-  {{#if this.image}}
-    <img class="avatar" src="{{this.image}}" alt="avatar">
+  <br>
+  {{#if card.image}}
+    <img class="avatar" src="{{card.image}}" alt="avatar">
   {{else}}
     <img class="avatar" src="/img/default.png" alt="avatar">
   {{/if}}
+  <br><br>
+  {{#if card.owner.name}}
+  <span>Usuário</span>
   <p>{{card.owner.name}}</p>
-  <p>Mensagem: {{card.message}}</p>
-  <p>Título: {{card.title}}</p>
-  <p>Email: {{card.email}}</p>
-  <p>Twitter: {{card.twitter}}</p>
-  <p>Mobile: {{card.mobile}}</p>
-  <p>Website: {{card.website}}</p>
-  <p>Facebook: {{card.facebook}}</p>
-  <p>Instagram: {{card.instagram}}</p>
-  <p>Outros: {{card.other}}</p>
+  {{else}}
+  <p>Não preenchido</p>
+  {{/if}}
+  <br>
+  <span>Mensagem</span>
+  {{#if card.message}}
+  <p>{{card.message}}</p>
+  {{else}}
+  <p>Não preenchido</p>
+  {{/if}}
+  <br>
+  <span>Email</span>
+  {{#if card.email}}
+  <p>{{card.email}}</p>
+  {{else}}
+  <p>Não preenchido</p>
+  {{/if}}
+  <br>
+  <span>Celular</span>
+  {{#if card.mobile}}
+  <p>{{card.mobile}}</p>
+  {{else}}
+  <p>Não preenchido</p>
+  {{/if}}
+  <br>
+  <span>Website</span>
+  {{#if card.website}}
+  <p>{{card.website}}</p>
+  {{else}}
+  <p>Não preenchido</p>
+  {{/if}}
+  <br>
+  <span>Twitter</span>
+  {{#if card.twitter}}
+  <p>{{card.twitter}}</p>
+  {{else}}
+  <p>Não preenchido</p>
+  {{/if}}
+  <br>
+  <span>Facebook</span>
+  {{#if card.facebook}}
+  <p>{{card.facebook}}</p>
+  {{else}}
+  <p>Não preenchido</p>
+  {{/if}}
+  <br>
+  <span>Instagram</span>
+  {{#if card.instagram}}
+  <p>{{card.instagram}}</p>
+  {{else}}
+  <p>Não preenchido</p>
+  {{/if}}
+  <br>
+  <span>Outros</span>
+  {{#if card.other}}
+  <p>{{card.other}}</p>
+  {{else}}
+  <p>Não preenchido</p>
+  {{/if}}
 
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editCard">
     Editar dados
@@ -34,23 +88,31 @@
       </div>
 
       <form action="/cards/edit/{{card._id}}" method="post">
-        <div class="modal-body">
-          <input type="text" name="cardTitle" placeholder="Nome da página" value="{{card.title}}">
-          <input type="text" name="cardImage" placeholder="Foto" value="{{card.image}}">
-          <input type="text" name="cardMessage" placeholder="Mensagem" value="{{card.message}}">
-          <input type="text" name="cardEmail" placeholder="E-mail" value="{{card.email}}">
-          <input type="text" name="cardMobile" placeholder="Telefone" value="{{card.mobile}}">
-          <input type="text" name="cardWebsite" placeholder="Website" value="{{card.website}}">
-          <input type="text" name="cardFacebook" placeholder="Facebook" value="{{card.facebook}}">
-          <input type="text" name="cardTwitter" placeholder="Twitter" value="{{card.twitter}}">
-          <input type="text" name="cardInstagram" placeholder="Instagram" value="{{card.instagram}}">
-          <input type="text" name="cardOther" placeholder="Outros" value="{{card.other}}">
+      <div class="float-container">
+        <div class="float-child">
+          <div class="modal-body">
+            <label for="basic-url">Nome do card</label><input class="input-group-text" type="text" name="cardTitle" placeholder="Nome da página" value="{{card.title}}">
+            <label for="basic-url">Nome do card</label><input class="input-group-text" type="text" name="cardImage" placeholder="Foto" value="{{card.image}}">
+            <label for="basic-url">Nome do card</label><input class="input-group-text" type="text" name="cardMessage" placeholder="Mensagem" value="{{card.message}}">
+            <label for="basic-url">Nome do card</label><input class="input-group-text" type="text" name="cardEmail" placeholder="E-mail" value="{{card.email}}">
+            <label for="basic-url">Nome do card</label><input class="input-group-text" type="text" name="cardMobile" placeholder="Telefone" value="{{card.mobile}}">
+          </div>
+        </div>
+        <div class="float-child">
+          <div class="modal-body">
+            <label for="basic-url">Nome do card</label><input class="input-group-text" type="text" name="cardWebsite" placeholder="Website" value="{{card.website}}">
+            <label for="basic-url">Nome do card</label><input class="input-group-text" type="text" name="cardFacebook" placeholder="Facebook" value="{{card.facebook}}">
+            <label for="basic-url">Nome do card</label><input class="input-group-text" type="text" name="cardTwitter" placeholder="Twitter" value="{{card.twitter}}">
+            <label for="basic-url">Nome do card</label><input class="input-group-text" type="text" name="cardInstagram" placeholder="Instagram" value="{{card.instagram}}">
+            <label for="basic-url">Nome do card</label><input class="input-group-text" type="text" name="cardOther" placeholder="Outros" value="{{card.other}}">
+          </div>
         </div>
 
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
           <button type="submit" class="btn btn-primary">Salvar</button>
         </div>
+      </div>
       </form>
       
     </div>

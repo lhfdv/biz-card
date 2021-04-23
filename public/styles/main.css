@@ -6,6 +6,19 @@ html, body{
   height: 100vh;
   margin: 0;
 }
+.container-home{
+  padding: 50px;
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #24252a;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  opacity: 0.9;
+}
 .container{
   padding: 30px;
   display: block;
@@ -25,27 +38,54 @@ html, body{
   padding: 30px;
   display: block;
   position: absolute;
-  top: 70%;
+  top: 10%;
   left: 50%;
   color: white;
-  transform: translate(-50%,-45%);
+  transform: translateX(-50%);
   background: #24252a;
   text-align: center;
   border-radius: 5px;
 }
 .container-div p{
-  border: 0;
+  background: rgb(66, 67, 77);
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid rgb(72, 149, 168);
+  padding: 10px 10px;
+  width: 300px;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 16px;
+  transition: 0.25s;
+}
+.container-div-showcase{
+  background: rgb(66, 67, 77);
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid rgb(72, 149, 168);
+  padding: 10px 10px;
+  width: 300px;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 16px;
+  transition: 0.25s;
+}
+.container-div-showcase p{
   background: none;
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid rgb(19, 206, 253);
+  border: 2px solid rgb(72, 149, 168);
   padding: 10px 10px;
-  width: 200px;
-  outline: none;  
+  width: 300px;
+  outline: none;
   color: white;
   font-size: 16px;
-  border-radius: 20px;
+  border-radius: 16px;
   transition: 0.25s;
 }
 .container h1{
@@ -92,6 +132,17 @@ html, body{
   background: #2ecc71;
   color: white;
 }
+.float-container {
+  border: 0px;
+  padding: 0px;
+  padding-right: 15%;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+}  
 
 * {
   box-sizing: border-box;
@@ -127,7 +178,7 @@ img{
 }
 .dot {
   cursor: pointer;
-  color: #b6eecd;
+  color: rgb(72, 149, 168);
   position: absolute;
   right: 30px;
   top: 16px;
