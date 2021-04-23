@@ -23,10 +23,15 @@
   <header>
     <nav>
       <ul class="nav__links">
-        <li><a href="/"><img src="/img/home.svg" width="50" height="30" class="white-svg"></a></li>
+        <li><a href="/logout"><img src="/img/logout.svg" width="50" height="30" class="white-svg"></a></li>
         <li><a class="cta" href="/cards">Meus Cards</a></li>
         <li><a class="cta"href="/cards/new">Novo Card</a></li>
-        <li><a href="/logout"><img src="/img/logout.svg" width="50" height="30" class="white-svg"></a></li>
+        <li>
+          <form class="search" action="/cards" method="get">
+            <input type="text" name="cardTitle" class="form-control input-lg" placeholder="Busque card pelo título" />
+          </form>
+        </li>
+
         <li><p class="logo">bizCard</p><p class="dot">.</p></li>
       </ul>
     </nav>
@@ -73,15 +78,13 @@
   <style>
     body {
       background-image: url('/img/background.png');
-        background-repeat: no-repeat;
-          background-attachment: fixed;
-  background-size: cover;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 3000px;
     }
   </style> 
 
   {{{body}}}
-
-
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

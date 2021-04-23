@@ -1,24 +1,25 @@
-<div class="container">
+<div class="container-div">
+  <h3>Cadastre um Card</h3>
   <form action="/cards/new" method="post" enctype="multipart/form-data">
+    <div class="float-container-newCard">
+      <div class="float-child-newCard">
+        <label for="basic-url">Instagram</label><input class="input-group-text" type="text" name="cardInstagram" placeholder="Instagram">
+        <label for="basic-url">Telefone</label><input class="input-group-text" type="text" name="cardMobile" placeholder="Mobile">
+        <label for="basic-url">Website</label><input class="input-group-text" type="text" ame="cardWebsite" placeholder="Website">
+        <label for="basic-url">Facebook</label><input class="input-group-text" type="text" name="cardFacebook" placeholder="Facebook">
+        <label for="basic-url">Outros</label><input class="input-group-text" type="text"  name="cardOther" placeholder="Outros">
+      </div>
+      <div class="float-child-newCard">
+        <label for="basic-url">Título</label><input class="input-group-text" name="cardTitle" placeholder="Titulo">
+        <label for="basic-url">Foto</label><input type="file" name="cardImage" placeholder="Link da foto" required />
+        <label for="basic-url">Mensagem</label><input class="input-group-text" type="text" name="cardMessage" placeholder="Mensagem">
+        <label for="basic-url">E-mail</label><input class="input-group-text" type="text" name="cardEmail" placeholder="E-mail de contato">
+        <label for="basic-url">Twitter</label><input class="input-group-text" type="text" name="cardTwitter" placeholder="Twitter">
+      </div>
 
-    <input type="text" name="cardTitle" placeholder="Titulo">
-    <div>
-      <input type="file" name="cardImage" placeholder="Link da foto" required />
     </div>
-
-    <input type="text" name="cardMessage" placeholder="Mensagem">
-    <input type="text" name="cardEmail" placeholder="E-mail de contato">
-    <input type="text" name="cardTwitter" placeholder="Twitter">
-    <input type="text" name="cardMobile" placeholder="Mobile">
-    <input type="text" name="cardWebsite" placeholder="Website">
-    <input type="text" name="cardFacebook" placeholder="Facebook">
-    <input type="text" name="cardInstagram" placeholder="Instagram">
-    <input type="text" name="cardOther" placeholder="Outros">
-    <input type="text" name="cardLink" placeholder="Link">
-
     <div>
-      <button type="submit">Cadastrar Card</button>
+      <button type="submit" class="btn btn-primary">Salvar</button>
     </div>
-
   </form>
 </div>

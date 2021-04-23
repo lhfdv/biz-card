@@ -1,30 +1,21 @@
-<header>
-  <ul class="nav__links">
-    <li>
-      <form class="search" action="/cards" method="get">
-        <input type="text" name="cardTitle" placeholder="Busque card pelo título">
-        <button type="submit">Buscar Cards</button>
-      </form>
-    </li>
-  </ul>
-</header>
 
-<div class="block-grid-xs-2 block-grid-sm-3 block-grid-md-4">
-  {{#if cards}}
-    {{#each cards}}
-      <div>
-        <a href="/cards/{{this._id}}">
-          <h3>{{this.title}}</h3>
-          {{#if this.image}}
-            <img class="avatar" src="{{this.image}}" alt="avatar">
-          {{else}}
-            <img class="avatar" src="/img/default.png" alt="avatar">
-          {{/if}}
-        </a>
-      </div>
-    {{/each}}
-  {{else}}
-    <h1>Nenhum card encontrado. Favor refazer a busca ou cadastrar um novo card.</h1>
-  {{/if}}
+{{#if cards}}
+  {{#each cards}}
+  <div class="gallery">
+    <a  target="_blank" href="/cards/{{this._id}}">
+      <div class="desc"><h3>{{this.title}}</h3></div>
+      {{#if this.image}}
+        <img src="{{this.image}}" alt="avatar">
+      {{else}}
+        <img src="/img/default.png" alt="avatar">
+      {{/if}}
+    </a>
+  </div>
+  {{/each}}
+{{else}}
+<div class="container-home">
+    <a><img src="/img/negative.svg" width="120" height="55" class="white-svg"></a>
+    <h3>Nenhum card encontrado. Favor digitar novamente a busca ou cadastrar um novo card</h3>
 </div>
+{{/if}}
         

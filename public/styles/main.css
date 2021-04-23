@@ -135,14 +135,37 @@ html, body{
 .float-container {
   border: 0px;
   padding: 0px;
-  padding-right: 15%;
+  padding-right: 3%;
+}
+
+.float-container-modal {
+  border: 0px;
+  padding: 0px;
+  padding-right: 8%;
 }
 
 .float-child {
   width: 50%;
   float: left;
   padding: 20px;
-}  
+}
+
+.float-container-newCard {
+  border: 0px;
+  padding: 0px;
+  padding-right: 0px;
+  padding-right: 15%;
+}
+
+.float-child-newCard {
+  width: 50%;
+  float: right;
+  padding-left: 135px;
+}
+
+hr.dashed {
+  border-top: 3px dashed #bbb;
+}
 
 * {
   box-sizing: border-box;
@@ -156,9 +179,6 @@ header {
   padding: 14px 1%;
   padding-bottom: 1px;
   background-color: #24252a;
-}
-img{
-  color: white;
 }
 .white-svg{
   color: white;
@@ -326,3 +346,27 @@ img{
       background-size: cover;
   }
 }
+
+div.gallery {
+  margin: 14px;
+  border: 2px solid #24252a;
+  float: left;
+  background: #24252a;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+div.gallery img {
+  border-radius: 100%;
+  width: 300px; 
+  height: 300px; 
+  object-fit: cover;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
