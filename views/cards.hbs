@@ -1,18 +1,13 @@
 <header>
   <ul class="nav__links">
   <li>
-    {{!-- <form class="search" action="/cards" method="get">
-      <input type="text" name="cardTitle" placeholder="Busque card pelo título">
-      <button type="submit">Buscar Cards</button>
-    </form> --}}
-  </li>
-  </ul>
-</header>
-
-    <form action="/cards" method="get">
+    <form class="search" action="/cards" method="get">
       <input type="text" name="cardTitle" placeholder="Busque card pelo título">
       <button type="submit">Buscar Cards</button>
     </form>
+  </li>
+  </ul>
+</header>
 
 <div class="block-grid-xs-2 block-grid-sm-3 block-grid-md-4">
   {{#if cards}}

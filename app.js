@@ -39,7 +39,6 @@ app.use('/showcase/', showcaseRoutes);
 // BLOQUEADOR DE REQUESTS (FILTRO)
 app.use((req, res, next) => {
 
-  console.log(req.session.currentUser);
   if (req.session.currentUser) {
     return next();
   }
