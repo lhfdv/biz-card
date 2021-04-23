@@ -1,7 +1,11 @@
 <div class="container-div">
-  <h4>Nome: {{card.title}}</h4>
-  <img class="avatar" src={{card.image}} alt="avatar">
-  <p>Usuário: {{card.owner.name}}</p>
+  <h4>{{card.title}}</h4>
+  {{#if this.image}}
+    <img class="avatar" src="{{this.image}}" alt="avatar">
+  {{else}}
+    <img class="avatar" src="/img/default.png" alt="avatar">
+  {{/if}}
+  <p>{{card.owner.name}}</p>
   <p>Mensagem: {{card.message}}</p>
   <p>Título: {{card.title}}</p>
   <p>Email: {{card.email}}</p>
@@ -11,7 +15,6 @@
   <p>Facebook: {{card.facebook}}</p>
   <p>Instagram: {{card.instagram}}</p>
   <p>Outros: {{card.other}}</p>
-  <p>Link: {{card.link}}</p>
 
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editCard">
     Editar dados
