@@ -1,8 +1,6 @@
 const express = require('express');
 const Card = require('../models/Card');
-const User = require('../models/User');
 const fileUploader = require('../config/cloudinary.config');
-const { format } = require('date-format-parse');
 const router = express();
 
 router.get('/', (req, res) => {
@@ -38,7 +36,7 @@ router.get('/:cardId', (req, res) => {
 
 router.post('/new', fileUploader.single('cardImage'),  (req, res) => {
 
-  const { cardTitle, cardMessage, cardEmail, cardTwitter, cardMobile, cardWebsite, cardFacebook, cardInstagram, cardOther, cardLink } = req.body;
+  const { cardTitle, cardMessage, cardEmail, cardTwitter, cardMobile, cardWebsite, cardFacebook, cardInstagram, cardOther } = req.body;
 
   const newCard = {
     owner: req.session.currentUser._id,
@@ -62,11 +60,11 @@ router.post('/new', fileUploader.single('cardImage'),  (req, res) => {
 
 });
 
-router.post('/edit/:cardId', (req, res) => {
-  const { cardTitle, cardImage, cardMessage, cardEmail, cardMobile, cardWebsite, cardFacebook, cardInstagram, cardTwitter, cardOther } = req.body;
+router.post('/edit/:cardId', fileUploader.single('cardImage'), (req, res) => {
+  const { cardTitle, cardMessage, cardEmail, cardMobile, cardWebsite, cardFacebook, cardInstagram, cardTwitter, cardOther } = req.body;
   const { cardId } = req.params;
 
-  Card.findByIdAndUpdate(cardId, { title: cardTitle, image: cardImage, message: cardMessage, email: cardEmail, mobile: cardMobile, website: cardWebsite, facebook: cardFacebook, instagram: cardInstagram, twitter: cardTwitter, other: cardOther })
+  Card.findByIdAndUpdate(cardId, { title: cardTitle, image: req.file.path, message: cardMessage, email: cardEmail, mobile: cardMobile, website: cardWebsite, facebook: cardFacebook, instagram: cardInstagram, twitter: cardTwitter, other: cardOther })
     .then(() => {
       res.redirect(`/cards/${cardId}`);
     })

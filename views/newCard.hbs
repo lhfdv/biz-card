@@ -1,4 +1,5 @@
 <div class="container-div">
+  <a><img src="/img/account.svg" width="120" height="55" class="white-svg"></a>
   <h3>Cadastre um Card</h3>
   <form action="/cards/new" method="post" enctype="multipart/form-data">
     <div class="float-container-newCard">
@@ -11,12 +12,11 @@
       </div>
       <div class="float-child-newCard">
         <label for="basic-url">Título</label><input class="input-group-text" name="cardTitle" placeholder="Titulo">
-        <label for="basic-url">Foto</label><input type="file" name="cardImage" placeholder="Link da foto" required />
+        <label for="basic-url">Foto</label><input type="file" class="input-group-text" name="cardImage" placeholder="Link da foto" required />
         <label for="basic-url">Mensagem</label><input class="input-group-text" type="text" name="cardMessage" placeholder="Mensagem">
         <label for="basic-url">E-mail</label><input class="input-group-text" type="text" name="cardEmail" placeholder="E-mail de contato">
         <label for="basic-url">Twitter</label><input class="input-group-text" type="text" name="cardTwitter" placeholder="Twitter">
       </div>
-
     </div>
     <div>
       <button type="submit" class="btn btn-primary">Salvar</button>
