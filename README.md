@@ -1,4 +1,4 @@
-## bizCard
+## bizCard :office:
 
 A virtual business card for your networks
 
