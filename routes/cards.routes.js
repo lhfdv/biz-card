@@ -52,7 +52,6 @@ router.post('/new', fileUploader.single('cardImage'),  (req, res) => {
     facebook: cardFacebook,
     instagram: cardInstagram,
     other : cardOther,
-    link: cardLink,
   }
 
   Card.create(newCard)
@@ -64,10 +63,10 @@ router.post('/new', fileUploader.single('cardImage'),  (req, res) => {
 });
 
 router.post('/edit/:cardId', (req, res) => {
-  const { cardTitle, cardImage, cardMessage, cardEmail, cardMobile, cardWebsite, cardFacebook, cardInstagram, cardTwitter, cardOther, cardLink } = req.body;
+  const { cardTitle, cardImage, cardMessage, cardEmail, cardMobile, cardWebsite, cardFacebook, cardInstagram, cardTwitter, cardOther } = req.body;
   const { cardId } = req.params;
 
-  Card.findByIdAndUpdate(cardId, { title: cardTitle, image: cardImage, message: cardMessage, email: cardEmail, mobile: cardMobile, website: cardWebsite, facebook: cardFacebook, instagram: cardInstagram, twitter: cardTwitter, other: cardOther, link: cardLink })
+  Card.findByIdAndUpdate(cardId, { title: cardTitle, image: cardImage, message: cardMessage, email: cardEmail, mobile: cardMobile, website: cardWebsite, facebook: cardFacebook, instagram: cardInstagram, twitter: cardTwitter, other: cardOther })
     .then(() => {
       res.redirect(`/cards/${cardId}`);
     })
