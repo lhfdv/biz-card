@@ -6,7 +6,7 @@ A virtual business card for your networks
 
 https://bizcard-br.herokuapp.com/
 
-## Tech:
+## Tech :computer:
 
 - JavaScript
 - CSS
