@@ -1,8 +1,12 @@
-Demo:
+## bizCard
+
+A virtual business card for your networks
+
+## Demo :gear:
 
 https://bizcard-br.herokuapp.com/
 
-Tech:
+## Tech:
 
 - JavaScript
 - CSS
@@ -16,7 +20,13 @@ Tech:
 - Express
 - Handlebars
 
-Sources:
+## Known Issues :beetle:
+
+- Can't change pictures.
+- No registration confirmation.
+- The style WILL break.
+
+## Sources :books:
 
 - https://www.deviantart.com/darfinus/art/Shrine-in-the-forest-803655695
 - https://heroicons.com/
