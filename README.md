@@ -9,9 +9,10 @@ Tech:
 - HTML5
 - Cloudinary
 - MongoDB Atlas
+- Mongoose
 - Heroku
 - Github
-- Boostrap
+- Bootstrap
 - Express
 - Handlebars
 
