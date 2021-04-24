@@ -60,11 +60,11 @@ router.post('/new', fileUploader.single('cardImage'),  (req, res) => {
 
 });
 
-router.post('/edit/:cardId', fileUploader.single('cardImage'), (req, res) => {
-  const { cardTitle, cardMessage, cardEmail, cardMobile, cardWebsite, cardFacebook, cardInstagram, cardTwitter, cardOther } = req.body;
+router.post('/edit/:cardId', (req, res) => {
+  const { cardTitle, cardMessage, cardEmail, cardMobile, cardWebsite, cardFacebook, cardInstagram, cardTwitter, cardOther, cardImage } = req.body;
   const { cardId } = req.params;
 
-  Card.findByIdAndUpdate(cardId, { title: cardTitle, image: req.file.path, message: cardMessage, email: cardEmail, mobile: cardMobile, website: cardWebsite, facebook: cardFacebook, instagram: cardInstagram, twitter: cardTwitter, other: cardOther })
+  Card.findByIdAndUpdate(cardId, { title: cardTitle, image: cardImage, message: cardMessage, email: cardEmail, mobile: cardMobile, website: cardWebsite, facebook: cardFacebook, instagram: cardInstagram, twitter: cardTwitter, other: cardOther })
     .then(() => {
       res.redirect(`/cards/${cardId}`);
     })
