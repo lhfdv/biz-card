@@ -2,8 +2,8 @@
 {{#if cards}}
   {{#each cards}}
   <div class="gallery">
-    <a  target="_blank" href="/cards/{{this._id}}">
-      <div class="desc"><h3>{{this.title}}</h3></div>
+    <a target="_blank" href="/cards/{{this._id}}" style="text-decoration: none;">
+      <div class="desc"><h3 target="_blank" >{{this.title}}</h3></div>
       {{#if this.image}}
         <img src="{{this.image}}" alt="avatar">
       {{else}}
