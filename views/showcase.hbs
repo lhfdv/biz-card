@@ -9,12 +9,12 @@
     <img class="avatar" src="/img/default.png" alt="avatar">
   {{/if}}
 
-  {{#if card.owner.name}}
-    <p>{{card.owner.name}}</p>
+  {{#if card.message}}
+    {{card.message}}
   {{/if}}
 
-  {{#if card.message}}
-    <p>{{card.message}}</p>
+  {{#if card.owner.name}}
+    <p>{{card.owner.name}}</p>
   {{/if}}
 
   {{#if card.email}}

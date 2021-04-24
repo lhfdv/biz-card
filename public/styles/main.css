@@ -61,6 +61,18 @@ html, body{
   transition: 0.25s;
 }
 .container-div-showcase{
+  padding: 30px;
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  color: white;
+  transform: translateX(-50%);
+  background: #24252a;
+  text-align: center;
+  border-radius: 5px;
+}
+.container-div-showcase p{
   background: rgb(66, 67, 77);
   display: block;
   margin: 20px auto;
@@ -70,20 +82,6 @@ html, body{
   width: 300px;
   outline: none;
   color: #fff;
-  font-size: 16px;
-  border-radius: 16px;
-  transition: 0.25s;
-}
-.container-div-showcase p{
-  background: none;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid rgb(72, 149, 168);
-  padding: 10px 10px;
-  width: 300px;
-  outline: none;
-  color: white;
   font-size: 16px;
   border-radius: 16px;
   transition: 0.25s;

@@ -8,4 +8,5 @@ function myFunction() {
 
   /* Copy the text inside the text field */
   document.execCommand("copy");
+
 } 
